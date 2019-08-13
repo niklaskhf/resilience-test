@@ -1,5 +1,6 @@
 # How To 
 
+![architecture](framework.png)
 ## Run the experiment
 ```
 chmod -x experiment.sh
