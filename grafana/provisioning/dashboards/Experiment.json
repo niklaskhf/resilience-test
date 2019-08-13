@@ -1,0 +1,161 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 2,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "Prometheus",
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 17,
+        "w": 20,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "interval": "",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "http_sever_requests_duration_seconds_sum{instance=\"polly:8084\",job=\"resiliencefs_dotnet\",uri=\"/circuitbreaker\"}",
+          "instant": false,
+          "legendFormat": "Polly",
+          "refId": "A"
+        },
+        {
+          "expr": "http_server_requests_seconds_sum{exception=\"None\",instance=\"sentinel:8083\",job=\"resiliencefs_spring\",method=\"GET\",outcome=\"SUCCESS\",status=\"200\",uri=\"/circuitbreaker\"}",
+          "legendFormat": "Sentinel",
+          "refId": "B"
+        },
+        {
+          "expr": "http_server_requests_seconds_sum{exception=\"None\",instance=\"resilience4j:8081\",job=\"resiliencefs_spring\",method=\"GET\",outcome=\"SUCCESS\",status=\"200\",uri=\"/circuitbreaker\"}",
+          "legendFormat": "resilience4j",
+          "refId": "C"
+        },
+        {
+          "expr": "http_server_requests_seconds_sum{exception=\"None\",instance=\"hystrix:8080\",job=\"resiliencefs_spring\",method=\"GET\",outcome=\"SUCCESS\",status=\"200\",uri=\"/circuitbreaker\"}",
+          "legendFormat": "Hystrix",
+          "refId": "D"
+        },
+        {
+          "expr": "http_server_request_duration_seconds_sum{instance=\"semian:8082\",job=\"resiliencefs_ruby\",method=\"get\",path=\"/circuitbreaker\"}",
+          "legendFormat": "Semian",
+          "refId": "E"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Response Time sum",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": "1s",
+  "schemaVersion": 19,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "1s",
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Experiment",
+  "uid": "D_8ApHOWk",
+  "version": 1
+}

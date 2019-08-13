@@ -1,0 +1,16 @@
+{
+  "FilePath": "/Users/niklaskhf/repos/resilience-test/PatternService_Polly/PatternService_Polly.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": null,
+  "RootNamespace": "PatternService_Polly",
+  "Documents": [],
+  "SerializationFormat": "0.1"
+}

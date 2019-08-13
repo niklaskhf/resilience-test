@@ -1,0 +1,125 @@
+version: '3'
+
+services:
+  hystrix:
+    image: resiliencefs/patternservice_hystrix
+    # build:
+    #   context: ./PatternService_Hystrix
+    #   dockerfile: Dockerfile
+    ports: 
+      - 8080:8080
+    restart: unless-stopped
+    depends_on: 
+      - faultservice
+    networks:
+      - network
+  
+  resilience4j:
+    image: resiliencefs/patternservice_resilience4j
+    # build:
+    #   context: ./PatternService_Resilience4J
+    #   dockerfile: Dockerfile
+    ports: 
+      - 8081:8081
+    restart: unless-stopped
+    depends_on: 
+      - faultservice
+    networks: 
+      - network
+
+  semian:
+    image: resiliencefs/patternservice_semian
+    # build:
+    #   context: ./PatternService_Semian
+    #   dockerfile: Dockerfile
+    ports: 
+      - 8082:8082
+    restart: unless-stopped
+    depends_on: 
+      - faultservice
+    networks: 
+      - network
+
+
+  sentinel:
+    image: resiliencefs/patternservice_sentinel
+    # build:
+    #   context: ./PatternService_Sentinel
+    #   dockerfile: Dockerfile
+    ports: 
+      - 8083:8083
+    restart: unless-stopped
+    depends_on: 
+      - faultservice
+    networks:
+      - network
+
+  polly: 
+    image: resiliencefs/patternservice_polly
+    ports:
+      - 8084:8084
+    restart: unless-stopped
+    depends_on:
+      - faultservice
+    networks: 
+      - network
+
+  faultservice:
+    image: resiliencefs/faultservice
+    # build:
+    #   context: ./FaultService
+    #   dockerfile: Dockerfile
+    ports: 
+      - 8090:8090
+    restart: unless-stopped 
+    networks: 
+      - network 
+
+  prometheus:
+    build:
+      context: ./prometheus
+      dockerfile: Dockerfile
+    ports: 
+      - 9090:9090
+    restart: unless-stopped 
+    networks: 
+      - network 
+    depends_on: 
+      - hystrix 
+      - resilience4j
+  grafana:
+    image: grafana/grafana
+    depends_on:
+      - prometheus
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/provisioning/:/etc/grafana/provisioning/
+    env_file:
+      - ./grafana/config.monitoring
+    networks:
+      - network
+    restart: always
+
+  locust:
+    #image: resiliencefs/locust
+    build: 
+        context: ./locust 
+        dockerfile: Dockerfile
+    ports:
+      - 8089:8089
+    depends_on:
+      - hystrix
+      - resilience4j
+      - semian
+      - sentinel
+      - polly
+      - prometheus 
+      - grafana 
+    networks:
+      - network
+    
+
+networks:
+  network:
+  

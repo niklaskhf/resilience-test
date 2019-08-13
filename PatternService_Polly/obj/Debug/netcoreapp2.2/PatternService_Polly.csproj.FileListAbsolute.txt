@@ -1,0 +1,14 @@
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.csprojAssemblyReference.cache
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.csproj.CoreCompileInputs.cache
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.RazorAssemblyInfo.cache
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.RazorAssemblyInfo.cs
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.AssemblyInfoInputs.cache
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.AssemblyInfo.cs
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/bin/Debug/netcoreapp2.2/PatternService_Polly.deps.json
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/bin/Debug/netcoreapp2.2/PatternService_Polly.runtimeconfig.json
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/bin/Debug/netcoreapp2.2/PatternService_Polly.runtimeconfig.dev.json
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/bin/Debug/netcoreapp2.2/PatternService_Polly.dll
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/bin/Debug/netcoreapp2.2/PatternService_Polly.pdb
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.RazorTargetAssemblyInfo.cache
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.dll
+/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/Debug/netcoreapp2.2/PatternService_Polly.pdb

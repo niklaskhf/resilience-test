@@ -1,0 +1,42 @@
+server:
+    port: 8081
+
+resilience4j.circuitbreaker:
+    configs:
+        default:
+            registerHealthIndicator: true
+            ringBufferSizeInClosedState: 10
+            ringBufferSizeInHalfOpenState: 3
+            automaticTransitionFromOpenToHalfOpenEnabled: true
+            waitDurationInOpenState: 60s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
+        shared:
+            registerHealthIndicator: true
+            ringBufferSizeInClosedState: 100
+            ringBufferSizeInHalfOpenState: 30
+            waitDurationInOpenState: 1s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
+    instances:
+        backendA:
+            baseConfig: default
+            ringBufferSizeInClosedState: 5
+        backendB:
+            registerHealthIndicator: true
+            ringBufferSizeInClosedState: 10
+            ringBufferSizeInHalfOpenState: 3
+            waitDurationInOpenState: 1s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
+
+resilience4j.bulkhead:
+    configs:
+        default:
+            maxConcurrentCalls: 100
+    instances:
+        backendA:
+            maxConcurrentCalls: 10
+        backendB:
+            maxWaitDuration: 10ms
+            maxConcurrentCalls: 20

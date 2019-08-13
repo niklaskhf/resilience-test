@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/PatternService_Polly.csproj": {}
+  },
+  "projects": {
+    "/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/PatternService_Polly.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/PatternService_Polly.csproj",
+        "projectName": "PatternService_Polly",
+        "projectPath": "/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/PatternService_Polly.csproj",
+        "packagesPath": "/Users/niklaskhf/.nuget/packages/",
+        "outputPath": "/Users/niklaskhf/GoogleDrive/Uni/BScSWT/Fachstudie/code/PatternService_Polly/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/niklaskhf/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
