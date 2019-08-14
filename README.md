@@ -1,13 +1,16 @@
-# How To 
+# Resilience Test Framework
+Framework for testing and comparing resilience libraries. 
 
 ![architecture](framework.png)
-## Run the experiment
+
+
+### Run the experiment
 ```
 chmod -x experiment.sh
 ./experiment.sh
 ```
 
-## docker-compose
+### docker-compose
 - build services individually
 - push docker images of services to registry
 - Start: 
@@ -20,17 +23,17 @@ docker-compose up (-d)
 ```
 docker-compose down
 ```
-## Locust:
+### Locust:
 ```
 localhost:8089
 ```
 
-## Prometheus:
+### Prometheus:
 ```
 localhost:9090
 ```
 
-## Grafana:
+### Grafana:
 ```
 localhost:3000
 ```
@@ -39,7 +42,7 @@ Example query: ```http_server_request_duration_seconds_sum{path="/circuitbreaker
 
 
 
-# New Service
+## New Service
 1. Write service
 2. Add prometheus
 3. Dockerize
